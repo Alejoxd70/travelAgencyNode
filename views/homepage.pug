@@ -1,0 +1,35 @@
+extends ./layout/index
+
+block slider    
+    .slider
+        h1 Rio de Janeiro 
+        em Adventure 
+
+block content 
+    main.container.mt-5
+        h2.text-center.mb-5 About our agency
+        .row.mb-5
+            .col-md-6
+                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita quasi, aliquam veniam cum qui nisi totam reiciendis alias exercitationem quam saepe eaque vero recusandae sit eos a eius voluptates? Enim?Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis rem nesciunt dolore quaerat, veniam consequuntur. 
+                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita quasi, aliquam veniam cum qui nisi totam reiciendis alias exercitationem quam saepe eaque vero recusandae sit eos a eius voluptates? Enim?Lorem ipsum dolor sit amet. 
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="Image about our agency", class="img-fluid")
+
+        include ./layout/block_travels
+    
+    .descuento
+        .container
+            .row 
+                .col-md-6 
+                    .contenido 
+                        h3 5% off!
+                        p.titulo Travel to Canada 
+                        p.titulo  From Today until -  
+                            span.precio= `${actualDay + 2}/${actualMonth}/${actualYear}`
+                        p.precio $2,500 USD
+
+    .container
+        h2.mt-5.text-center Reviews
+
+        include ./layout/block_reviews
+        
